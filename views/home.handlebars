@@ -1,0 +1,132 @@
+<div class="page-header">
+  <h2>{{ title }}</h2>
+</div>
+<div class="row">
+
+  {{#each pins}}
+    <button id="{{bcm}}"
+            type="button"
+            value="{{status}}"
+            name="{{bcm}}"
+            title="{{title}}"
+            class="{{#if status}} btn btn-secondary {{else}} btn btn-success btn-lg active {{/if}}">
+      <i class="fa fa-lightbulb-o" aria-hidden="true"></i>
+    </button>
+  {{/each}}
+
+  <!--<button id="bcm-16" type="button" value="1" name="bcm-16" class="btn btn-primary">
+    <i class="fa fa-lightbulb-o" aria-hidden="true"></i>
+  </button>
+  <button id="bcm-12" type="button" value="1" name="bcm-12" class="btn btn-primary">
+    <i class="fa fa-lightbulb-o" aria-hidden="true"></i>
+  </button>
+  <button id="bcm-18" type="button" value="1" name="bcm-18" class="btn btn-primary">
+    <i class="fa fa-lightbulb-o" aria-hidden="true"></i>
+  </button>
+  <button id="bcm-20" type="button" value="1" name="bcm-20" class="btn btn-primary">
+    <i class="fa fa-lightbulb-o" aria-hidden="true"></i>
+  </button>
+  <button id="bcm-25" type="button" value="1" name="bcm-25" class="btn btn-primary">
+    <i class="fa fa-lightbulb-o" aria-hidden="true"></i>
+  </button>-->
+
+  <!--<div class="panel panel-default">
+    <div class="panel-body">
+      <a href="#" class="col-md-3 col-sm-6">
+        <div class="progress blue">
+          <span class="progress-left">
+            <span class="progress-bar"></span>
+          </span>
+          <span class="progress-right">
+            <span class="progress-bar"></span>
+          </span>
+          <div class="progress-value">
+            <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
+          </div>
+        </div>
+      </a>
+      Navbars are responsive meta components that serve as navigation headers for your application or site.
+      They begin collapsed (and are toggleable) in mobile views and become horizontal as the available viewport width increases.
+    </div>
+  </div>
+
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <a href="#" class="col-md-3 col-sm-6">
+        <div class="progress yellow">
+      <span class="progress-left">
+        <span class="progress-bar"></span>
+      </span>
+          <span class="progress-right">
+        <span class="progress-bar"></span>
+      </span>
+          <div class="progress-value">
+            <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
+          </div>
+        </div>
+      </a>
+      <p> Screen readers will have trouble with your forms if you don't include a label for every input. For these inline forms,
+      you can hide the labels using the .sr-only class. There are further alternative methods of providing a label for
+      assistive technologies, such as the aria-label, aria-labelledby or title attribute. If none of these is present,
+      screen readers may resort to using the placeholder attribute.</p>
+    </div>
+  </div>-->
+
+</div>
+
+
+<!--
+<form id="join-form" action="#">
+    <div class="form-group row">
+        <label class="col-xs-2 col-form-label" for="nickname">Podaj nick</label>
+        <div class="col-xs-6">
+            <input id="nick" class="form-control" type="text">
+        </div>
+        <dic class="col-xs-4">
+            <button class="btn btn-primary">Dołącz</button>
+        </dic>
+    </div>
+</form>
+
+<form id="chat-form" action="#">
+    <div id="chat-window" class="chat-window">
+<div class="chat-line">
+    <div class="chat-line-time">12:33</div>
+    <div class="chat-line-nick">Maciek</div>
+    <div class="chat-line-message">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis, magnam.</div>
+</div>
+
+<div class="chat-line">
+    <div class="chat-line-time">12:34</div>
+    <div class="chat-line-nick">Tomek</div>
+    <div class="chat-line-message">Lorem ipsum dolor sit amet.</div>
+</div>
+
+<div class="chat-line">
+    <div class="chat-line-time">12:34</div>
+    <div class="chat-line-status">Tomek opuścił czat.</div>
+</div>
+</div>
+
+    <div class="form-group">
+        <textarea id="message" rows="7" class="form-control" placeholder="Twoja wiadomość..."></textarea>
+    </div>
+    <div class="form-group">
+        <button class="btn btn-primary pull-xs-right">Wyślij</button>
+    </div>
+</form>-->
+
+<script id="chat-status-template" type="text/x-handlebars-template">
+<div class="chat-line">
+    <div class="chat-line-time">\{{ time }}</div>
+    <div class="chat-line-status">\{{ status }}</div>
+</div>
+</script>
+
+<script id="chat-message-template" type="text/x-handlebars-template">
+  <div class="chat-line">
+    <div class="chat-line-time">\{{ time }}</div>
+    <div class="chat-line-nick">\{{ nick }}</div>
+    <div class="chat-line-message">\{{ message }}</div>
+  </div>
+</script>
